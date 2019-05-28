@@ -51,9 +51,6 @@
 **Репозиторий:** [Вектор-06Ц. Конвертер графических файлов GRF в BMP.](https://github.com/drilnet/vector-06c-grf2bmp)
 <br>
 **Репозиторий:** [Скрипт, который показывает все цвета Вектор'а-06Ц.](https://github.com/drilnet/vector-06c-color256)
-<br>
-<br>
-**Репозиторий:** [RLE кодирование своими руками (VRLE8).](https://github.com/drilnet/rle)
 
 <hr>
 
