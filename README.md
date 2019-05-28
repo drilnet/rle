@@ -7,5 +7,8 @@
 
 Лицензия на программу и скрипт: **Free**.
 
+![](https://github.com/drilnet/rle/blob/master/UA.png)
+
 RLE кодирование своими руками (VRLE8).
+<br>
 RLE кодирование своими руками (VRLE16).
