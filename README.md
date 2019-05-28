@@ -11,9 +11,9 @@
 
 Выберите то, что Вам нужно:
 
-[RLE кодирование/декодирование своими руками (VRLE8)](https://github.com/drilnet/rle/tree/master/VRLE8).
+[RLE кодирование/декодирование своими руками (VRLE8)](https://github.com/drilnet/rle/tree/master/VRLE8)
 <br>
-[RLE кодирование/декодирование своими руками (VRLE16)](https://github.com/drilnet/rle/tree/master/VRLE16).
+[RLE кодирование/декодирование своими руками (VRLE16)](https://github.com/drilnet/rle/tree/master/VRLE16)
 
 **Примечание.**
 <br>
