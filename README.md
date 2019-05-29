@@ -23,7 +23,7 @@
 
 Какие возможности алгоритма?
 <br>
-По своей функциональности похож на графический формат [TGA](https://ru.wikipedia.org/wiki/Truevision_TGA) ([UKR](https://uk.wikipedia.org/wiki/TGA))!
+k;lk;т [TGA](https://ru.wikipedia.org/wiki/Truevision_TGA) ([UKR](https://uk.wikipedia.org/wiki/TGA))!
 
 [Ukraine](https://en.wikipedia.org/wiki/Ukraine) (Украина). (**C**) Демидов С.В.
 
