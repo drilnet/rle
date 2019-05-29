@@ -21,6 +21,9 @@
 <br>
 **VRLE16** - для кодирования/декодирования одной "порции" данных используется два байта.
 
+Какие возможности алгоритма?
+По своей функциональности похож на графический формат [TGA](https://ru.wikipedia.org/wiki/Truevision_TGA) ([UKR](https://uk.wikipedia.org/wiki/TGA))!
+
 [Ukraine](https://en.wikipedia.org/wiki/Ukraine) (Украина). (**C**) Демидов С.В.
 
 <hr>
