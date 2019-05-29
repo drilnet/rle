@@ -9,16 +9,18 @@
 
 ![](https://github.com/drilnet/rle/blob/master/UA.png)
 
+Что здесь?
+Здесь полноценный **RLE** кодер/декодер!
+
+Какие возможности алгоритма?
+<br>
+По своей функциональности это алгоритм схожий на алгоритм применённый в графическом формате [TGA](https://ru.wikipedia.org/wiki/Truevision_TGA) ([UKR](https://uk.wikipedia.org/wiki/TGA))!
+
 Выберите то, что Вам нужно:
 
 [RLE кодирование/декодирование своими руками (VRLE8)](https://github.com/drilnet/rle/tree/master/VRLE8)
 <br>
 [RLE кодирование/декодирование своими руками (VRLE16)](https://github.com/drilnet/rle/tree/master/VRLE16)
-
-
-Какие возможности алгоритма?
-<br>
-k;lk;т [TGA](https://ru.wikipedia.org/wiki/Truevision_TGA) ([UKR](https://uk.wikipedia.org/wiki/TGA))!
 
 [Ukraine](https://en.wikipedia.org/wiki/Ukraine) (Украина). (**C**) Демидов С.В.
 
