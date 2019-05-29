@@ -15,7 +15,7 @@
 
 Какие возможности алгоритма?
 <br>
-По своей функциональности это алгоритм схожий на алгоритм применённый в графическом формате [TGA](https://ru.wikipedia.org/wiki/Truevision_TGA) ([UKR](https://uk.wikipedia.org/wiki/TGA))!
+По своей функциональности этот алгоритм схожий на алгоритм применённый в графическом формате [TGA](https://ru.wikipedia.org/wiki/Truevision_TGA) ([UKR](https://uk.wikipedia.org/wiki/TGA))!
 
 Выберите то, что Вам нужно:
 
