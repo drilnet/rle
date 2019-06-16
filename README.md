@@ -104,6 +104,8 @@ VRLE16.
 Форум по русскому языку: [https://rusforus.ru](https://rusforus.ru)
 <br>
 Грамматика на PROMT Онлайн: https://www.translate.ru/grammar/ru-es/
+<br>
+Проверка слова (и др.): http://new.gramota.ru
 
 <hr>
 
