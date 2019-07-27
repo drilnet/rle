@@ -1,3 +1,11 @@
+Содержимое:
+
+```
+1
+2
+3
+```
+
 **Массивы (см. файл [vrle8.c](https://github.com/drilnet/rle/blob/master/VRLE8/SRC%20C%20-%20VRLE8.%20Ver.01/vrle8.c)):**
 
 ```
