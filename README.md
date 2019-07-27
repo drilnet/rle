@@ -63,7 +63,7 @@ VRLE16.
 
 **Дополнительные ссылки:**
 
-* Пусто.
+* MinGW (gcc для Windows): [http://www.mingw.org/](http://www.mingw.org/)
 
 <hr>
 
