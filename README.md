@@ -5,7 +5,7 @@
 
 ## RLE кодирование/декодирование своими руками (VRLE8, VRLE16)
 
-Лицензия на программу: **Free**.
+Лицензия: **Free**.
 
 ![](https://github.com/drilnet/rle/blob/master/UA.png)
 
