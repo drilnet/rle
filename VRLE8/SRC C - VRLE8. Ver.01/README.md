@@ -1,4 +1,4 @@
-**Массивы (см. файл vrle8.c):**
+**Массивы (см. файл [vrle8.c](https://github.com/drilnet/rle/blob/master/VRLE8/SRC%20C%20-%20VRLE8.%20Ver.01/vrle8.c)):**
 
 ```
 ---
@@ -8,7 +8,7 @@
 ---
 ```
 
-**Переменная long int (см. файл vrle8.c):**
+**Переменная long int (см. файл [vrle8.c](https://github.com/drilnet/rle/blob/master/VRLE8/SRC%20C%20-%20VRLE8.%20Ver.01/vrle8.c)):**
 
 ```
 ---
