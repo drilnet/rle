@@ -55,6 +55,8 @@ VRLE16.
  Этого алгоритма не было на ПК Вектор-06Ц (родителем алгоритма VRLE16 является алгоритм VRLE8)!
 ```
 
+Логотипы к этим алгоритмам - [здесь](https://github.com/drilnet/blender3d-logovrle8-logovrle16)
+
 [Ukraine](https://en.wikipedia.org/wiki/Ukraine) (Украина). (**C**) Демидов С.В.
 
 <hr>
