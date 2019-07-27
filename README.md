@@ -9,19 +9,21 @@
 
 ![](https://github.com/drilnet/rle/blob/master/UA.png)
 
-Что здесь?
-<br>
+### Что здесь?
+
 Здесь полноценный **RLE** кодер/декодер написанный на [Си](https://ru.wikipedia.org/wiki/Си_(язык_программирования)) ([UKR](https://uk.wikipedia.org/wiki/C_(%D0%BC%D0%BE%D0%B2%D0%B0_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F)))!
 
-Какие возможности алгоритма?
-<br>
+### Какие возможности алгоритма?
+
 По своей функциональности этот алгоритм схожий на алгоритм используемый в графическом формате [TGA](https://ru.wikipedia.org/wiki/Truevision_TGA) ([UKR](https://uk.wikipedia.org/wiki/TGA))!
+
+### Исходники
 
 RLE кодирование/декодирование своими руками (VRLE8) - [здесь](https://github.com/drilnet/rle/tree/master/VRLE8)
 <br>
 RLE кодирование/декодирование своими руками (VRLE16) - [здесь](https://github.com/drilnet/rle/tree/master/VRLE16)
 
-Что означает **VRLE8** и **VRLE16**?
+### Что означает VRLE8 и VRLE16?
 
 **VRLE8**
 
