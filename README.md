@@ -17,15 +17,13 @@
 
 По своей функциональности этот алгоритм схожий на алгоритм используемый в графическом формате [TGA](https://ru.wikipedia.org/wiki/Truevision_TGA) ([UKR](https://uk.wikipedia.org/wiki/TGA))!
 
-**Исходники**
+**Исходники!**
 
 RLE кодирование/декодирование своими руками (VRLE8) - [здесь](https://github.com/drilnet/rle/tree/master/VRLE8)
 <br>
 RLE кодирование/декодирование своими руками (VRLE16) - [здесь](https://github.com/drilnet/rle/tree/master/VRLE16)
 
 **Что означает VRLE8 и VRLE16?**
-
-VRLE8
 
 ```
 ---------------
@@ -41,9 +39,6 @@ VRLE8
 ```
 
 ```
-VRLE16.
--------
-
 ----------------
 | V | RLE | 16 |
 ----------------
