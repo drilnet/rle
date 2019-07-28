@@ -26,7 +26,7 @@ vrle8.out        - Исполняемый файл для FreeBSD.
 ---
 ```
 
-**Переменная long int (см. файл [vrle8.c](https://github.com/drilnet/rle/blob/master/VRLE8/SRC%20C%20-%20VRLE8.%20Ver.01/vrle8.c)):**
+**Переменная array_in_length (см. файл [vrle8.c](https://github.com/drilnet/rle/blob/master/VRLE8/SRC%20C%20-%20VRLE8.%20Ver.01/vrle8.c)):**
 
 ```
 ---
@@ -74,6 +74,7 @@ vrle8.out        - Исполняемый файл для FreeBSD.
 
 **Дополнительная иеформация**
 
+```
 Таблица перевода чисел:
 -------------- -------
 |  bin | hex | | dec |
@@ -99,6 +100,7 @@ vrle8.out        - Исполняемый файл для FreeBSD.
 bin - Двоичная система счисления.
 hex - Шестнадцатеричная система счисления.
 dec - Десятичная система счисления.
+```
 
 **Компиляция**
 
