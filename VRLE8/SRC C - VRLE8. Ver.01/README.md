@@ -104,14 +104,18 @@ dec - Десятичная система счисления.
 
 **Компиляция в FreeBSD или в Linux!**
 
+```
 ---
 | $ gcc vrle8.c -o vrle8.out
 ---
+```
 
 **Компиляция в Windows (для Windows)!**
 
+```
 ---
 | См. MinGW
 ---
+```
 
 [Ukraine](https://en.wikipedia.org/wiki/Ukraine) (Украина). (**C**) Демидов С.В.
