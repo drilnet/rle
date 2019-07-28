@@ -7,10 +7,10 @@
 **Содержимое:**
 
 ```
-vrle8 - 1251.txt -
-vrle8 - UTF8.txt -
-vrle8.c	         - Исходник.
-vrle8.c.copy	 - Копия.
+vrle8 - 1251.txt - Readme.
+vrle8 - UTF8.txt - Readme.
+vrle8.c	        - Исходник.
+vrle8.c.copy	  - Копия.
 vrle8.out        - Исполняемый файл для FreeBSD.
 ```
 
