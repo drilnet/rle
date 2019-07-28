@@ -1,10 +1,16 @@
+<hr>
+
 Содержимое:
 
 ```
-1
-2
-3
+vrle8 - 1251.txt -
+vrle8 - UTF8.txt -
+vrle8.c	         - Исходник.
+vrle8.c.copy	 - Копия.
+vrle8.out        - Исполняемый файл для FreeBSD.
 ```
+
+<hr>
 
 **Массивы (см. файл [vrle8.c](https://github.com/drilnet/rle/blob/master/VRLE8/SRC%20C%20-%20VRLE8.%20Ver.01/vrle8.c)):**
 
@@ -23,6 +29,8 @@
 | array_in_length - здесь должна быть указана длина входного массива array_in.
 ---
 ```
+
+<hr>
 
 kljpokjpoi joijo0jo kjkljp kjkp
 
