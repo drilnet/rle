@@ -124,9 +124,11 @@ dec - Десятичная система счисления.
 
 ```
 ---
-| См. [MinGW](http://www.mingw.org/)
+| См. MinGW
 ---
 ```
+
+MinGW (gcc для Windows): [http://www.mingw.org/](http://www.mingw.org/)
 
 <hr>
 
