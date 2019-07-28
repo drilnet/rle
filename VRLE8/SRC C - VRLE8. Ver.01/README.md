@@ -1,3 +1,7 @@
+Лицензия: **Free**.
+
+![](https://github.com/drilnet/rle/blob/master/UA.png)
+
 <hr>
 
 Содержимое:
