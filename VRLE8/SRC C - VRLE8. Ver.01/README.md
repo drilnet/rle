@@ -102,18 +102,16 @@ hex - Шестнадцатеричная система счисления.
 dec - Десятичная система счисления.
 ```
 
-**Компиляция**
+**Компиляция в FreeBSD или в Linux!**
 
-    ---
-    | Компиляция в FreeBSD или в Linux!
-    |
-    |    $ gcc vrle8.c -o vrle8.out
-    ---
+---
+| $ gcc vrle8.c -o vrle8.out
+---
 
-    ---
-    | Компиляция в Windows (для Windows)!
-    |
-    |   См. MinGW
-    ---
+**Компиляция в Windows (для Windows)!**
 
-    [Ukraine](https://en.wikipedia.org/wiki/Ukraine) (Украина). (**C**) Демидов С.В.
+---
+| См. MinGW
+---
+
+[Ukraine](https://en.wikipedia.org/wiki/Ukraine) (Украина). (**C**) Демидов С.В.
