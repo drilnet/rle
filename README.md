@@ -91,6 +91,11 @@ RLE кодирование/декодирование своими руками 
 **Репозиторий:** [Вектор-06Ц. Конвертер графических файлов GRF в BMP](https://github.com/drilnet/vector-06c-grf2bmp)
 <br>
 **Репозиторий:** [Скрипт, который показывает все цвета Вектор'а-06Ц](https://github.com/drilnet/vector-06c-color256)
+<br>
+<br>
+**Репозиторий:** [Электроника (всё в одном репозитории)](https://github.com/drilnet/electronics)
+
+&nbsp;&nbsp;&nbsp;&bull; [Ящик для экспонирования фоторезиста](https://github.com/drilnet/electronics/tree/master/Box%20For%20Exposure%20Photoresist)
 
 <hr>
 
