@@ -7,6 +7,8 @@
 **Содержимое:**
 
 ```
+Scribus - В этом каталоге sla-файл и pdf-файл.
+
 vrle8 - 1251.txt - Readme.
 vrle8 - UTF8.txt - Readme.
 vrle8.c          - Исходник Си.
