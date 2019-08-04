@@ -16,7 +16,7 @@
    ---
    | vrle8 - 1251.txt - Readme.
    | vrle8 - UTF8.txt - Readme.
-   | vrle8.c          - Исходник Си (полноценный RLE кодер/декодер).
+   | vrle8.c          - Исходник на Си (полноценный RLE кодер/декодер).
    | vrle8.c.copy     - Копия файла vrle8.c.
    | vrle8.out        - Исполняемый файл для FreeBSD.
    ---
