@@ -27,11 +27,9 @@
 **Массивы (см. файл [vrle8.c](https://github.com/drilnet/rle/blob/master/VRLE8/SRC%20C%20-%20VRLE8.%20Ver.01/vrle8.c)):**
 
 ```
----
-| array_in[10] - входной массив с байтами;
-| array_out[20] - выходной массив с байтами (сюда кодируем);
-| array_out_2[10] - выходной массив с байтами 2 (сюда декодируем).
----
+array_in[10] - входной массив с байтами;
+array_out[20] - выходной массив с байтами (сюда кодируем);
+array_out_2[10] - выходной массив с байтами 2 (сюда декодируем).
 ```
 
 **Переменная array_in_length (см. файл [vrle8.c](https://github.com/drilnet/rle/blob/master/VRLE8/SRC%20C%20-%20VRLE8.%20Ver.01/vrle8.c)):**
