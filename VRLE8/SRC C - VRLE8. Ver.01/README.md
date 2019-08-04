@@ -35,9 +35,7 @@ array_out_2[10] - выходной массив с байтами 2 (сюда д
 **Переменная array_in_length (см. файл [vrle8.c](https://github.com/drilnet/rle/blob/master/VRLE8/SRC%20C%20-%20VRLE8.%20Ver.01/vrle8.c)):**
 
 ```
----
-| array_in_length - здесь должна быть указана длина входного массива array_in (в байтах).
----
+array_in_length - здесь должна быть указана длина входного массива array_in (в байтах).
 ```
 
 **Примечание.**
