@@ -100,6 +100,11 @@ RLE кодирование/декодирование своими руками 
 **Репозиторий:** [Скрипт, который показывает все цвета Вектор'а-06Ц](https://github.com/drilnet/vector-06c-color256 "Скрипт написан на Perl")
 <br>
 <br>
+**Репозиторий:** [Игра Пятнашки (Puzzle 15, Game 15), игра написана на JavaScript](https://github.com/drilnet/puzzle15 "Игра для вашего сайта")
+<br>
+**Репозиторий:** [Мой сайт (репозиторий моего сайта)](https://github.com/drilnet/drilnet.github.io "Репозиторий сайта https://drilnet.github.io")
+<br>
+<br>
 **Репозиторий:** [Электроника (всё в одном репозитории)](https://github.com/drilnet/electronics)
 
 &nbsp;&nbsp;&nbsp;&bull; [Усилитель звука на микросхеме
