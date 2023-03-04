@@ -13,7 +13,7 @@
 <br>
 На главной странице моего сайта см. спойлер: RLE кодирование/декодирование своими руками
 <br>
-Сайт: [https://drilnet.github.io](https://drilnet.github.io)	
+Мой сайт: [https://drilnet.github.io](https://drilnet.github.io)	
 <hr>
 
 **Ещё репозитории автора:**
