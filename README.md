@@ -21,6 +21,9 @@
 Консольная программа для Windows смотри: [VRLE8 for Windows](https://github.com/drilnet/rle/tree/master/VRLE8%20for%20Windows)
 <br>
 Исходники на Си VRLE8 (исходники для FreeBSD и для Windows): [SRC](https://github.com/drilnet/rle/tree/master/VRLE8%20for%20Windows/src)
+<br>
+<br>
+(C) Демидов С.В.
 <hr>
 
 **Ещё репозитории автора:**
