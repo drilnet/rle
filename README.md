@@ -14,6 +14,8 @@
 На главной странице моего сайта см. спойлер: RLE кодирование/декодирование своими руками
 <br>
 Мой сайт на: [https://drilnet.github.io/](https://drilnet.github.io/) Новый сайт: [http://drilnet.website/](http://drilnet.website/)
+<br>
+Консольная программа для Windows (и исходники) смотри: [https://github.com/drilnet/rle/tree/master/VRLE8 for Windows](VRLE8 for Windows)
 <hr>
 
 **Ещё репозитории автора:**
