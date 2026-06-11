@@ -20,7 +20,7 @@
 <br>
 Консольная программа для Windows смотри: [VRLE8 for Windows](https://github.com/drilnet/rle/tree/master/VRLE8%20for%20Windows)
 <br>
-Исходники: src
+Исходники: [src](https://github.com/drilnet/rle/tree/master/VRLE8%20for%20Windows/src)
 <hr>
 
 **Ещё репозитории автора:**
