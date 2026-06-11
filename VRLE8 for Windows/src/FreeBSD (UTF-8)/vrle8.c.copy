@@ -1,0 +1,748 @@
+
+//
+// Кодирование/Декодирование VRLE8.
+// Предоставляется как есть!
+// Лицензия: Free.
+// Украина (Ukraine). (C) Демидов С.В.
+//
+
+//
+// Не совсем удачно написано.
+//
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+	extern void Shapka();
+		extern void Instruction();
+			extern void LowerTXT();
+
+			// Используется для кодинга и декодинга.
+			extern void GetFileSize();
+				// Используется для кодинга и декодинга.
+				extern void LoadFile();
+					// Используется для кодинга,
+					extern void CodingVRLE8();
+						// Используется для кодинга и декодинга.
+						extern void SaveFile();
+					// Используется для декодинга.
+				extern void CheckTitleVRLE8();
+			// Используется для декодинга.
+			extern void DeCodingVRLE8();
+		// Используется для декодинга.
+		extern void SelfControl();
+	// Прикреплённые файлы.
+	extern void Attached();
+
+	// Здесь загруженный файл.
+	// Используется для кодинга и декодинга.
+	extern unsigned char *buffer;
+
+	// Здесь закодированные данные.
+	// Используется для кодинга.
+	extern unsigned char *$arraycoding8;
+
+	// Размер файла в байтах.
+	// Используется для кодинга и декодинга.
+	extern unsigned long int sizefile; // от 0 и до 4294967295.
+
+	// Здесь размер закодированных данных (в байтах)
+	// Используется для кодинга.
+	extern unsigned long int sizecoding; // от 0 и до 4294967295.
+
+	// Здесь размер раскодированных данных (в байтах, без заголовка).
+	// Используется для декодинга.
+	extern unsigned long int sizedatavrle8; // от 0 и до 4294967295.
+
+	// Здесь массив для записи на диск.
+	// Используется для кодинга и декодинга.
+	unsigned char *buffer_save;
+
+	// Английский, Русский, Украинский.
+	unsigned char engrusukr;
+
+void main(int argc, char *argv[])
+{
+
+	// Расширение vrle8.
+	unsigned char ext[7] = { 0 };
+
+	// Здесь имя файла с расширением (vrle8).
+	unsigned char filename_vrle8[256] = { 0 };
+
+	// Здесь имя файла без расширения.
+	unsigned char filename[256] = { 0 };
+
+	// Для цикла.
+	unsigned char z, total;
+
+	// Для цикла.
+	unsigned long int z4, x4;
+
+	// Если в командной строке пусто.
+	if (argv[1] == NULL)
+		{
+		// Включить Русский.
+		engrusukr = 1;
+
+		printf("\n");
+
+		// Шапка.
+		Shapka(engrusukr);
+
+		printf("\n");
+		printf("\n");
+
+		// Инструкция.
+		Instruction(engrusukr);
+
+		printf("\n");
+		printf("\n");
+
+		// Завершить работу программы (0 - нормальное завершение).
+		exit(0);
+		}
+
+	// Если ENG. Вывести шапку и инструкцию.
+	if (strcmp(argv[1], "-eng") == 0 && argv[2] == NULL)
+		{
+		// Включить Английский.
+		engrusukr = 0;
+
+		printf("\n");
+
+		// Шапка.
+		Shapka(engrusukr);
+
+		printf("\n");
+		printf("\n");
+
+		// Инструкция.
+		Instruction(engrusukr);
+
+		printf("\n");
+		printf("\n");
+
+		// Завершить работу программы (0 - нормальное завершение).
+		exit(0);
+		}
+
+	else
+
+	// Если RUS. Вывести шапку и инструкцию.
+	if (strcmp(argv[1], "-rus") == 0 && argv[2] == NULL)
+		{
+		// Включить Русский.
+		engrusukr = 1;
+
+		printf("\n");
+
+		// Шапка.
+		Shapka(engrusukr);
+
+		printf("\n");
+		printf("\n");
+
+		// Инструкция.
+		Instruction(engrusukr);
+
+		printf("\n");
+		printf("\n");
+
+		// Завершить работу программы (0 - нормальное завершение).
+		exit(0);
+		}
+
+	else
+
+	// Если UKR. Вывести шапку и инструкцию.
+	if (strcmp(argv[1], "-ukr") == 0 && argv[2] == NULL)
+		{
+		// Включить Украинский.
+		engrusukr = 2;
+
+		printf("\n");
+
+		// Шапка.
+		Shapka(engrusukr);
+
+		printf("\n");
+		printf("\n");
+
+		// Инструкция.
+		Instruction(engrusukr);
+
+		printf("\n");
+		printf("\n");
+
+		// Завершить работу программы (0 - нормальное завершение).
+		exit(0);
+		}
+
+	// ---------
+	// ATTACHED.
+	// ---------
+	if (strcmp(argv[1], "-eng") == 0 && strcmp(argv[2], "-save") == 0)
+		{
+		engrusukr = 0;
+			Attached();
+				printf("%s", "\nOK!\n\n");
+
+		// Завершить работу программы (0 - нормальное завершение).
+		exit(0);
+		}
+
+	else
+
+	// ---------
+	// ATTACHED.
+	// ---------
+	if (strcmp(argv[1], "-rus") == 0 && strcmp(argv[2], "-save") == 0)
+		{
+		engrusukr = 1;
+			Attached();
+				printf("%s", "\nOK!\n\n");
+
+		// Завершить работу программы (0 - нормальное завершение).
+		exit(0);
+		}
+
+	else
+
+	// ---------
+	// ATTACHED.
+	// ---------
+	if (strcmp(argv[1], "-ukr") == 0 && strcmp(argv[2], "-save") == 0)
+		{
+		engrusukr = 2;
+			Attached();
+				printf("%s", "\nOK!\n\n");
+
+		// Завершить работу программы (0 - нормальное завершение).
+		exit(0);
+		}
+
+	// Если не -eng, не -rus, не -ukr.
+	if (strcmp(argv[1], "-eng") != 0 && strcmp(argv[1], "-rus") != 0 && strcmp(argv[1], "-ukr") != 0)
+		{
+		// Включить Руский.
+		engrusukr = 1;
+
+		printf("\n");
+
+		// Шапка.
+		Shapka(engrusukr);
+
+		printf("\n");
+		printf("\n");
+
+		// Инструкция.
+		Instruction(engrusukr);
+
+		printf("\n");
+		printf("\n");
+
+		// Завершить работу программы (0 - нормальное завершение).
+		exit(0);
+		}
+
+	printf("\n");
+
+	// Определяем нужный язык.
+	if (strcmp(argv[1], "-eng") == 0) { engrusukr = 0; }
+	else
+	if (strcmp(argv[1], "-rus") == 0) { engrusukr = 1; }
+	else
+	if (strcmp(argv[1], "-ukr") == 0) { engrusukr = 2; }
+
+	total = strlen(argv[2]);
+
+	// Расширение в массив ext[].
+	ext[6] = 0;
+	ext[5] = argv[2][total - 1];
+	ext[4] = argv[2][total - 2];
+	ext[3] = argv[2][total - 3];
+	ext[2] = argv[2][total - 4];
+	ext[1] = argv[2][total - 5];
+	ext[0] = argv[2][total - 6];
+
+	// Расширение в нижний регистр.
+	LowerTXT(ext);
+
+	// Решаем что делать.
+	// ------------------
+
+	// Поиск первого вхождения...
+	if (strstr(ext, ".vrle8") != NULL)
+		{
+		// Расширение vrle8 найдено!
+		// -------------------------
+
+		// ----------- //
+		// Декодируем. //
+		// ----------- //
+
+		// Шапка.
+		Shapka(engrusukr);
+
+		printf("\n");
+
+		// Проверить заголовок VRLE8.
+		CheckTitleVRLE8(argv[2]);
+
+		// Получить размер входного файла (sizefile).
+		GetFileSize(argv[2]);
+		// Загрузить файл в *buffer.
+		LoadFile(argv[2]);
+		// Декодируем из *buffer в *buffer_save.
+		DeCodingVRLE8();
+
+		printf("\n");
+
+		// Входной файл.
+		switch (engrusukr)
+			{
+			// English.
+			case 0:
+				printf("%s", "   Input File: ");
+				printf("%s%s%d%s", argv[2], " (", sizefile, " bytes)");
+			break;
+
+			// Русский.
+			case 1:
+				printf("%s", "   Входной файл: ");
+				printf("%s%s%d%s", argv[2], " (", sizefile, " байт'а)");
+			break;
+
+			// Украинский.
+			case 2:
+				printf("%s", "   Вхідний файл: ");
+				printf("%s%s%d%s", argv[2], " (", sizefile, " байт'и)");
+			break;
+			}
+
+		// Длина имя файла (сколько символов).
+		total = strlen(argv[2]) - 6; // Минус расширение.
+
+		// С копировать входное имя файла.
+		// С копировать в массив filename.
+		for (z = 0; z < total; z++)
+			{
+			filename[z] = argv[2][z];
+			}
+
+		printf("\n");
+
+		// Выходной файл.
+		switch (engrusukr)
+			{
+			// English.
+			case 0:
+				printf("%s", "   Output File: ");
+				printf("%s%s%d%s", filename, " (", sizedatavrle8, " bytes)");
+			break;
+
+			// Русский.
+			case 1:
+				printf("%s", "   Выходной файл: ");
+				printf("%s%s%d%s", filename, " (", sizedatavrle8, " байт'а)");
+			break;
+
+			// Украинский.
+			case 2:
+				printf("%s", "   Вихідний файл: ");
+				printf("%s%s%d%s", filename, " (", sizedatavrle8, " байт'и)");
+			break;
+			}
+
+		// Записываем файл на диск (записываем buffer_save).
+		// filename - Имя файла.
+		SaveFile(filename, sizedatavrle8);
+
+		printf("\n\n");
+		printf("%s", "   OK!");
+		printf("\n\n");
+
+		// Закрыть массив buffer.
+		free(buffer);
+		// Закрыть массив buffer_save.
+		free(buffer_save);
+		}
+		else
+		{
+		// Расширение vrle8 не найдено!
+		// ----------------------------
+
+		// --------- //
+		// Кодируем. //
+		// --------- //
+
+		// Шапка.
+		Shapka(engrusukr);
+
+		printf("\n");
+
+		// Получить размер входного файла (sizefile).
+		GetFileSize(argv[2]);
+		// Загрузить файл в *buffer.
+		LoadFile(argv[2]);
+		// Кодируем данные в *$arraycoding8.
+		CodingVRLE8();
+
+	// Self Control.
+	// -------------
+
+	SelfControl();
+
+	// -------------
+
+		printf("\n");
+
+		// Входной файл.
+		switch (engrusukr)
+			{
+			// English.
+			case 0:
+				printf("%s", "   Input File: ");
+				printf("%s%s%d%s", argv[2], " (", sizefile, " bytes)");
+			break;
+
+			// Русский.
+			case 1:
+				printf("%s", "   Входной файл: ");
+				printf("%s%s%d%s", argv[2], " (", sizefile, " байт'а)");
+			break;
+
+			// Украинский.
+			case 2:
+				printf("%s", "   Вхідний файл: ");
+				printf("%s%s%d%s", argv[2], " (", sizefile, " байт'и)");
+			break;
+			}
+
+		printf("\n");
+
+		// Длина имя файла (сколько символов).
+		total = strlen(argv[2]);
+
+		// С копировать входное имя файла.
+		// С копировать в массив filename_vrle8.
+		for (z = 0; z < total; z++)
+			{
+			filename_vrle8[z] = argv[2][z];
+			}
+
+		// Объеденить filename_vrle8 и .vrle8, результат в filename_vrle8.
+		strcat(filename_vrle8, ".vrle8");
+
+		// Выходной файл.
+		switch (engrusukr)
+			{
+			// English.
+			case 0:
+				// Плюс 6 байт - Заголовок VRLE8!
+				printf("%s", "   Output File: ");
+				printf("%s%s%d%s", filename_vrle8, " (", sizecoding + 6, " bytes");
+
+				// Меньше.
+				if (sizecoding + 6 < sizefile)
+					{
+					printf("%s%u%s", ", ", (sizefile - (sizecoding + 6)), " bytes less)");
+					}
+
+					else
+
+				// Равны.
+				if (sizecoding + 6 == sizefile)
+					{
+					printf("%s", ")");
+					}
+
+					else
+
+				// Больше.
+				if (sizecoding + 6 > sizefile)
+					{
+					printf("%s%u%s", ", ", ((sizecoding + 6)  - sizefile ), " bytes larger)");
+					}
+			break;
+
+			// Русский.
+			case 1:
+				// Плюс 6 байт - Заголовок VRLE8!
+				printf("%s", "   Выходной файл: ");
+				printf("%s%s%d%s", filename_vrle8, " (", sizecoding + 6, " байт'а");
+
+				// Меньше.
+				if (sizecoding + 6 < sizefile)
+					{
+					printf("%s%u%s", ", меньше на ", (sizefile - (sizecoding + 6)), " байт'а)");
+					}
+
+					else
+
+				// Равны.
+				if (sizecoding + 6 == sizefile)
+					{
+					printf("%s", ")");
+					}
+
+					else
+
+				// Больше.
+				if (sizecoding + 6 > sizefile)
+					{
+					printf("%s%u%s", ", больше на ", ((sizecoding + 6) - sizefile ), " байт'а)");
+					}
+			break;
+
+			// Украинский.
+			case 2:
+				// Плюс 6 байт - Заголовок VRLE8!
+				printf("%s", "   Вихідний файл: ");
+				printf("%s%s%d%s", filename_vrle8, " (", sizecoding + 6, " байт'и");
+
+				// Меньше.
+				if (sizecoding + 6 < sizefile)
+					{
+					printf("%s%u%s", ", менше на ", (sizefile - (sizecoding + 6)), " байт'и)");
+					}
+
+					else
+
+				// Равны.
+				if (sizecoding + 6 == sizefile)
+					{
+					printf("%s", ")");
+					}
+
+					else
+
+				// Больше.
+				if (sizecoding + 6 > sizefile)
+					{
+					printf("%s%u%s", ", більше на ", ((sizecoding + 6) - sizefile ), " байт'и)");
+					}
+			break;
+			} // Конец switch.
+
+		// Здесь данные для записи на диск.
+		// Выделяем память в два раза больше.
+		buffer_save = malloc(sizefile + sizefile);
+
+		// Заголовок VRLE8.
+		buffer_save[0] = 'V';
+		buffer_save[1] = 'R';
+		buffer_save[2] = 'L';
+		buffer_save[3] = 'E';
+		buffer_save[4] = '8';
+		buffer_save[5] = 0; // Зарезервировано.
+
+		x4 = 6;
+
+		// Копируем.
+		for (z4 = 0; z4 < sizecoding; z4++)
+			{
+			buffer_save[x4++] = $arraycoding8[z4];
+			}
+
+		// Записываем файл на диск (записываем buffer_save).
+		// filename_vrle8 - Имя и Расширение файла.
+		SaveFile(filename_vrle8, sizecoding + 6);
+
+		// Закрыть массив buffer.
+		free(buffer);
+			// Закрыть массив $arraycoding8.
+			free($arraycoding8);
+				// Закрыть массив buffer_save.
+				free(buffer_save);
+
+		printf("\n\n");
+		printf("%s", "   OK!");
+		printf("\n\n");
+		} // Конец кодируем.
+
+// Конец.
+}
+
+//
+// Шапка.
+//
+void Shapka(unsigned int engrusukr)
+{
+	switch (engrusukr)
+		{
+		// English.
+		case 0:
+			printf("%s", "┌────────────────────────────────────────────────────────────┐\n");
+			printf("%s", "│ File converter: file to VRLE8 and VRLE8 to file.           │\n");
+			printf("%s", "│ RLE encoding and RLE decoding.                             │\n");
+			printf("%s", "│ A complete encoder and decoder.                            │\n");
+			printf("%s", "│ Written in C.                                              │\n");
+			printf("%s", "│                                                            │\n");
+			printf("%s", "│ For eight-bit microprocessors and microcontrollers.        │\n");
+			printf("%s", "│ The algorithm was borrowed from the Vector-06C computer.   │\n");
+			printf("%s", "│ Ukraine. (C) Demidov S.V.                                  │\n");
+			printf("%s", "└────────────────────────────────────────────────────────────┘");
+		break;
+
+		// Русский.
+		case 1:
+			printf("%s", "┌────────────────────────────────────────────────────────────┐\n");
+			printf("%s", "│ Конвертер файлов: файл в VRLE8 и VRLE8 в файл.             │\n");
+			printf("%s", "│ RLE-кодирование и RLE-декодирование.                       │\n");
+			printf("%s", "│ Полноценный кодер и декодер.                               │\n");
+			printf("%s", "│ Написано на Си.                                            │\n");
+			printf("%s", "│                                                            │\n");
+			printf("%s", "│ Для восьмибитных микропроцессоров и для микроконтроллеров. │\n");
+			printf("%s", "│ Алгоритм заимствован с компьютера \"Вектор-06Ц\".            │\n");
+			printf("%s", "│ Украина. (C) Демидов С.В.                                  │\n");
+			printf("%s", "└────────────────────────────────────────────────────────────┘");
+		break;
+
+		// Украинский.
+		case 2:
+			printf("%s", "┌────────────────────────────────────────────────────────────┐\n");
+			printf("%s", "│ Конвертер файлів: файл у VRLE8 та VRLE8 у файл.            │\n");
+			printf("%s", "│ RLE-кодування та RLE-декодування.                          │\n");
+			printf("%s", "│ Повноцінний кодер та декодер.                              │\n");
+			printf("%s", "│ Написано на Сі.                                            │\n");
+			printf("%s", "│                                                            │\n");
+			printf("%s", "│ Для восьмибітних мікропроцесорів та для мікроконтролерів.  │\n");
+			printf("%s", "│ Алгоритм запозичений із комп'ютера \"Вектор-06Ц\".           │\n");
+			printf("%s", "│ Україна. (C) Демидов С.В.                                  │\n");
+			printf("%s", "└────────────────────────────────────────────────────────────┘");
+		break;
+		}
+}
+
+//
+// Вывод инструкции.
+//
+void Instruction(unsigned int engrusukr)
+{
+	switch (engrusukr)
+		{
+		// English.
+		case 0:
+			printf("%s", "   Command Line Format:\n\n");
+
+			printf("%s", "      $ vrle8 -eng file_name\n");
+			printf("%s", "      The output will be: file_name.vrle8\n\n");
+
+			printf("%s", "      $ vrle8 -eng file_name.vrle8\n");
+			printf("%s", "      The output will be: file_name\n\n");
+
+			printf("%s", "      $ vrle8 -eng -save\n");
+			printf("%s", "      Save the attached files to this program\n");
+			printf("%s", "      to disk (vrle8 data structure and vrle8 logo)\n\n");
+
+			printf("%s", "   Comments in the program:\n\n");
+
+			printf("%s", "      -eng - English\n");
+			printf("%s", "      -rus - Russian\n");
+			printf("%s", "      -ukr - Ukrainian\n\n");
+
+			printf("%s", "      Indication eng or rus or ukr - Mandatory!\n\n");
+
+			printf("%s", "   File size (input) - up to 50MB!");
+		break;
+
+		// Русский.
+		case 1:
+			printf("%s", "   Формат командной строки:\n\n");
+
+			printf("%s", "      $ vrle8 -rus имя_файла\n");
+			printf("%s", "      На выходе будет: имя_файла.vrle8\n\n");
+
+			printf("%s", "      $ vrle8 -rus имя_файла.vrle8\n");
+			printf("%s", "      На выходе будет: имя_файла\n\n");
+
+			printf("%s", "      $ vrle8 -rus -save\n");
+			printf("%s", "      Сохранить на диск прикреплённые файлы к этой\n");
+			printf("%s", "      программе (структура данных vrle8 и лого vrle8)\n\n");
+
+			printf("%s", "   Комментарии в программе:\n\n");
+
+			printf("%s", "      -eng - Английский\n");
+			printf("%s", "      -rus - Русский\n");
+			printf("%s", "      -ukr - Украинский\n\n");
+
+			printf("%s", "      Указание eng или rus или ukr - Обязательно!\n\n");
+
+			printf("%s", "   Размер файла (входной) - до 50MB!");
+		break;
+
+		// Украинский.
+		case 2:
+			printf("%s", "   Формат командного рядка:\n\n");
+
+			printf("%s", "      $ vrle8 -ukr им'я_файла\n");
+			printf("%s", "      На виході буде: ім'я_файла.vrle8\n\n");
+
+			printf("%s", "      $ vrle8 -ukr им'я_файла.vrle8\n");
+			printf("%s", "      На виході буде: ім'я_файла\n\n");
+
+			printf("%s", "      $ vrle8 -ukr -save\n");
+			printf("%s", "      Записати на диск прикріплені файли до цієї\n");
+			printf("%s", "      програми (структура даних vrle8 та лого vrle8)\n\n");
+
+			printf("%s", "   Коментарі у програмі:\n\n");
+
+			printf("%s", "      -eng - Англійська\n");
+			printf("%s", "      -rus - Російська\n");
+			printf("%s", "      -ukr - Українська\n\n");
+
+			printf("%s", "      Вказівки eng або rus або ukr - Обов'язково!\n\n");
+
+			printf("%s", "   Розмір файлу (вхідний) – до 50MB!");
+		break;
+		}
+}
+
+//
+// Верхний регистр в Нижний регистр.
+//
+void LowerTXT(unsigned char *text)
+{
+	// Верхний регистр.
+	unsigned char txt_1[] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
+				  'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+				  'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
+				  'Y', 'Z'
+				};
+
+	// Нижний регистр.
+	unsigned char txt_2[] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+				  'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+				  'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
+				  'y', 'z'
+				};
+
+	unsigned char y;
+	unsigned long int x, total;
+
+	total = strlen(text);
+
+	for (x = 0; x < total; x++)
+		{
+		// 26 - это всех букв в массиве.
+		for (y = 0; y < 26; y++)
+			{
+			if (txt_1[y] == text[x])
+				{
+				text[x] = txt_2[y];
+				break;
+				}
+			}
+		}
+}
+
+//
+// Адрес.
+//
+void Empty()
+{
+printf("        Demidov S.V. ul. Stadionnaya, dom 1, korp. B, kv. 20, g. Donets, Izyumskij r-n, obl. Khar`kovskaya, 64250, Ukraine        ");
+}
