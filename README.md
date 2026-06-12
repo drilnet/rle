@@ -16,7 +16,7 @@
 Мой сайт на: [https://drilnet.github.io/](https://drilnet.github.io/) Новый сайт: [http://drilnet.website/](http://drilnet.website/) (рекомендуется)
 <br>
 <br>
-Примечание.
+Дополнение.
 <br>
 Консольная программа для Windows смотри: [VRLE8 for Windows](https://github.com/drilnet/rle/tree/master/VRLE8%20for%20Windows)
 <br>
